@@ -7,25 +7,20 @@ public class MoodAnalyzerTest {
 
     private GroovyTestCase Assert;
 
+
     @Test
     public void passMessageSadWhenReturnsSad() {
-        try {
-            MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-            String analyzedMood = moodAnalyzer.moodAnalyze("Invalid mood");
-            Assert.assertEquals("SAD", analyzedMood);
-        } catch (AssertionError e) {
-            System.out.println("SAD");
-        }
-
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I Am In Sad Mood");
+        String analyzedMood = moodAnalyzer.moodAnalyze();
+        Assert.assertEquals("SAD", analyzedMood);
     }
 
     @Test
     public void passMessageHappyWhenReturnsNotSad() {
-        MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-        String analyzedMood = moodAnalyzer.moodAnalyze("I Am In Happy Mood");
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I Am In Happy Mood");
+        String analyzedMood = moodAnalyzer.moodAnalyze();
         Assert.assertEquals("HAPPY", analyzedMood);
     }
 
 }
-
 

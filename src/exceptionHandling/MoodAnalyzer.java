@@ -1,7 +1,14 @@
 package exceptionHandling;
 
 public class MoodAnalyzer {
-    public static void main(String[] args) {
-        System.out.println("Welcome to mood Analyzer solution");
+    String message;
+
+    String moodAnalyze(String message) {
+        if (message == "I Am In Sad Mood") {
+            return null;
+        } else {
+            return "HAPPY";
+        }
     }
+
 }
